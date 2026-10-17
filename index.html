@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="這字怎麼念">
+<meta name="description" content="寫下不認識的字，看看注音、拼音和解釋，聽聽怎麼念。">
+<title>這字怎麼念？</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png"><link rel="icon" href="./icons/icon.svg"><link rel="stylesheet" href="./style.css">
+<body><main>
+<header><span class="seal" aria-hidden="true">字</span><div><p class="eyebrow">你的隨身識字小幫手</p><h1>這字怎麼念<span>？</span></h1></div></header>
+<p class="intro">不會念，寫寫看。<br>用手指寫下一個字，一起認識它。</p>
+<section class="workspace" aria-label="手寫查字">
+<div class="writing"><div class="section-top"><h2><small>01</small> 寫一個字</h2><span id="stroke-count">0 筆</span></div>
+<div class="board"><canvas id="canvas" width="640" height="640" aria-label="手寫區，請用手指或滑鼠寫字"></canvas><span id="hint">在這裡寫字</span></div>
+<div class="toolbar"><button id="undo" disabled>↶ 復原一筆</button><button id="clear" disabled>清除重寫</button></div>
+<div class="status-row"><p id="status" role="status">正在載入辨識核心…</p><button id="retry" hidden>重新載入</button></div>
+<p class="tip">依照筆順，一次寫一個字，辨識會更準確。</p></div>
+<div class="reading"><h2><small>02</small> 找到你寫的字</h2><p class="muted">點選候選字，看看它怎麼念。</p><div id="candidates" aria-label="辨識候選字"><p class="empty">寫完後，候選字會出現在這裡。</p></div>
+<article id="result" aria-live="polite"><div class="empty-result"><span>ㄅ ㄆ ㄇ</span><p>每一個不認識的字，<br>都是新的發現。</p></div></article></div></section>
+<section class="recent"><div class="section-top"><h2>最近查過</h2><button id="clear-history">清除紀錄</button></div><div id="history"></div></section>
+<details><summary>加入 iPhone 主畫面・離線使用</summary><p>在 Safari 開啟本頁 → 點「分享」→「加入主畫面」。首次請連網，等下方顯示「已可離線查字」；之後手寫辨識與字典即可離線使用。發音依裝置已安裝的語音而定。</p></details>
+<footer><p id="offline" role="status">正在準備離線資源…</p><p>字典：教育部《重編國語辭典修訂本》／<a href="./credits.html">資料來源與授權</a></p></footer>
+</main><script type="module" src="./app.js"></script></body></html>
